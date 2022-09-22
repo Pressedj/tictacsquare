@@ -2,11 +2,14 @@
 
 Currently working well, with some design.
 To do:
-- Add another row below Player names so that you can actually see which player has what color
-	- Possibly add a way to see whats selected
+-  Result notification
 - Update the score counter
-- Give the text elements a design
-- test the mobile version
-- Remove text from tiles
-- Remove the flex-container border?
 - refactor it for OOP
+- Lock in colors once per game
+Mostly Complete- test the mobile version 
+
+Complete - Add another row below Player names so that you can actually see which player has what color
+Complete - Possibly add a way to see whats selected
+Complete - Give the text elements a design
+Complete - Remove the flex-container border? complete
+

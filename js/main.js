@@ -1,3 +1,4 @@
+import { Howl, Howler } from 'howler';
 document.querySelector('#reset').addEventListener('click', clear)
 const tiles = document.querySelectorAll('.tile')
 const colors1 = document.querySelectorAll('.colors1')
@@ -8,11 +9,21 @@ const winTrios = ['.row1', '.row2', '.row3',
 let player = true
 let colorToggle
 let turns = 0
+
 //Adda check to make sure player1Color !== player2Color
 //player acts as a boolean vlalue to switch between the two players
 let player1Color = 'rgb(34, 193, 195)'
-let player2Color = 'rgb(253,187,45)'
+let player2Color = 'rgb(253, 187, 45)'
 
+function hideColorChoice() {
+     document.querySelector('.colorContainer1').style.display = 'none'
+     document.querySelector('.colorContainer2').style.display = 'none'
+}
+
+function showColorhoice() {
+    document.querySelector('.colorContainer1').style.display = 'flex'
+    document.querySelector('.colorContainer2').style.display = 'flex'
+}
 function endCheck(){
     winTrios.forEach(trio => {
         let checker = document.querySelectorAll(trio)
@@ -59,6 +70,7 @@ colors2.forEach(color2 => {
         document.querySelector(':root').style.setProperty('--player2', player2Color);
         return player2Color
     })
+    
 })
 
 function playerColorChoice() {
@@ -76,23 +88,40 @@ function pNotification(str) {
 }
 
 //add event listener to all elements with class tile
+
+
+function clear() {
+    document.querySelector('h1').innerHTML = 'Board Reset, Waiting for Players..'
+    showColorhoice()
+    tiles.forEach(tile => tile.style.background = '#F0FFFF')
+    turns = 0
+}
+
+function checkPlayerColors() {
+    if (player1Color === player2Color) {
+        alert('Please Pick Different colors for Player1 and Player2')
+        showColorhoice()
+        clear()
+        return false
+    } else {
+        hideColorChoice()
+    }
+}
+
+
 tiles.forEach(tile => {
+    
     tile.addEventListener('click', function playerChoiceResponse() {
         document.querySelector('h1').innerHTML = 'A match has begun!'
-
         //player1 equals true
         player === true ? colorToggle = player1Color : colorToggle = player2Color
         tile.style.background = colorToggle
         turns += 1
         endCheck()
+
         //function to change to next player color
         player === false ? player = true : player = false
+        checkPlayerColors()
+        
     })
 })
-
-
-function clear() {
-    document.querySelector('h1').innerHTML = 'Board Reset, Waiting for Players..'
-    tiles.forEach(tile => tile.style.background = '#F0FFFF')
-    turns = 0
-}

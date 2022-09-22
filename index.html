@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta />
-    <title>Untitled</title>
+    <title>TicTacSquare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <link href="assets/main.css" rel="stylesheet" />
 </head>
 <body>
@@ -17,27 +20,30 @@
         <h2 class="winner"></h2>
     </section>
     <section id="colorChoice">
-        <div class="colorContainer1">
+        <div class="playerBlock">
             <section class="name1">&#8595 Player1 Color &#8595</section>
-            <section class="colors1" id="red"></section>
-            <section class="colors1" id="orange"></section>
-            <section class="colors1" id="yellow"></section>
-            <section class="colors1" id="green"></section>
-            <section class="colors1" id="blue"></section>
-            <section class="colors1" id="indigo"></section>
-            <section class="colors1" id="violet"></section>
+            <div class="colorContainer1">
+                <section class="colors1" id="red"></section>
+                <section class="colors1" id="orange"></section>
+                <section class="colors1" id="yellow"></section>
+                <section class="colors1" id="green"></section>
+                <section class="colors1" id="blue"></section>
+                <section class="colors1" id="indigo"></section>
+                <section class="colors1" id="violet"></section>
+            </div>
         </div>
-        <button id="reset">Reset</button>
-
-        <div class="colorContainer2">
+        <button id="reset"><span>Reset</span></button>
+        <div class="playerBlock">
             <section class="name2">&#8595 Player2 Color &#8595</section>
-            <section class="colors2" id="red"></section>
-            <section class="colors2" id="orange"></section>
-            <section class="colors2" id="yellow"></section>
-            <section class="colors2" id="green"></section>
-            <section class="colors2" id="blue"></section>
-            <section class="colors2" id="indigo"></section>
-            <section class="colors2" id="violet"></section>
+            <div class="colorContainer2">
+                <section class="colors2" id="red"></section>
+                <section class="colors2" id="orange"></section>
+                <section class="colors2" id="yellow"></section>
+                <section class="colors2" id="green"></section>
+                <section class="colors2" id="blue"></section>
+                <section class="colors2" id="indigo"></section>
+                <section class="colors2" id="violet"></section>
+            </div>
         </div>
     </section>
 
@@ -72,6 +78,7 @@
     </div>
     <section>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/background.js"></script>
 
