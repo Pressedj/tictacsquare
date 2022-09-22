@@ -75,6 +75,8 @@ Layout
 */
 body {
     background: #F0FFFF;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 :root {
     --player1: rgba(34,193,195,1);
@@ -89,25 +91,43 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    border: 10px solid orange;
     justify-content: center;
+    border: 10px solid lightblue;
     margin: auto;
 }
 #colorChoice {
     display: flex;
     margin: 1em auto;
-    width: 85%;
+    width: 90%;
     justify-content: space-around;
 }
-.name1, .name2{
+.name1, .name2 {
     width: 100%;
+    font-weight: 700;
+    font-size: 1.7rem;
+    font-family: Bahnschrift;
     text-align: center;
+    height: 3.5vh;
+    filter: brightness(160%);
+    border-radius: .2rem;
+    padding-top: .2rem;
+}
+.name1{
+    background: var(--player1);
+}
+.name2 {
+    background: var(--player2);
+}
+#reset{
+    margin: auto;
+    height: 3.5vh;
+
 }
 .colorContainer1, .colorContainer2 {
     display: flex;
     flex-wrap: wrap;
     width: 40%;
-    border: 1px solid black;
+
 }
 
 .colors1, .colors2 {
@@ -139,19 +159,23 @@ body {
 }
 
 .tile {
-    border: 1px solid black;
-    width: 33%;
+    width: 33.33%;
     height: 25vh;
     position: relative;
     overflow: hidden;
-    border: 1px solid black;
     display: inline-block;
     line-height: 15px;
-    padding: 18px 18px 17px;
-    text-decoration: none;
     
 }
+.col2 {
+    border-right: .5rem dashed lightgrey;
+    border-left: .5rem dashed lightgrey;
+}
 
+.row2 {
+    border-top: .5rem dashed lightgrey;
+    border-bottom: .5rem dashed lightgrey;
+}
 .tile:after {
     content: "";
     position: absolute;

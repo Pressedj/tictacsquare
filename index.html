@@ -6,17 +6,19 @@
     <link href="assets/main.css" rel="stylesheet" />
 </head>
 <body>
-    <section id="gameText">
+    <section id="ready">
         <h1>Ready to play?</h1>
 
         <h2>Curent Turn: Player 1</h2>
 
         <span>Score Count: </span>
     </section>
-
+    <section id="result">
+        <h2 class="winner"></h2>
+    </section>
     <section id="colorChoice">
         <div class="colorContainer1">
-            <section class="name1">Player1</section>
+            <section class="name1">&#8595 Player1 Color &#8595</section>
             <section class="colors1" id="red"></section>
             <section class="colors1" id="orange"></section>
             <section class="colors1" id="yellow"></section>
@@ -25,8 +27,10 @@
             <section class="colors1" id="indigo"></section>
             <section class="colors1" id="violet"></section>
         </div>
+        <button id="reset">Reset</button>
+
         <div class="colorContainer2">
-            <section class="name2">Player2</section>
+            <section class="name2">&#8595 Player2 Color &#8595</section>
             <section class="colors2" id="red"></section>
             <section class="colors2" id="orange"></section>
             <section class="colors2" id="yellow"></section>
@@ -67,8 +71,6 @@
         </section>
     </div>
     <section>
-        <button id="reset">Reset</button>
-
     </section>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/background.js"></script>
