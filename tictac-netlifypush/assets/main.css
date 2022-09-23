@@ -1,0 +1,283 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*
+  ========================================
+Layout
+  ========================================
+*/
+body {
+    background: #F0FFFF;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Racing Sans One', cursive, Arial, Helvetica, sans-serif;
+}
+:root {
+    --player1: rgba(34,193,195,1);
+    --player2: rgba(253,187,45,1);
+}
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    border: 10px solid lightblue;
+    margin: auto;
+}
+#colorChoice {
+    display: flex;
+    margin: 1em auto;
+    width: 90%;
+    justify-content: space-around;
+}
+.playerBlock {
+    flex-direction: column;
+    width: 40%;
+}
+.name1, .name2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-align: center;
+    height: 5vh;
+    filter: brightness(160%);
+    border-radius: .2rem;
+    padding-top: .2rem;
+}
+.name1{
+    background: var(--player1);
+}
+.name2 {
+    background: var(--player2);
+}
+#reset, #reseter {
+    margin: auto;
+    height: 3vh;
+    font-family: 'Racing Sans One', cursive, Arial, Helvetica, sans-serif;
+    background: rgba(191, 245, 104, 0.8);
+    width: 15%;
+    height: 8vh;
+    font-size: 3rem;
+    border: .1rem solid lightgrey;
+    border-radius: .2rem;
+}
+
+#reseter:hover, #reset:hover {
+        opacity: 70%;
+        border: .2rem solid black;
+    }
+
+
+
+/*Player Color Choices*/
+.colorContainer1, .colorContainer2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.colors1, .colors2 {
+    width: 14.28%;
+    border: 1px solid black;
+    height: 7vh;
+}
+
+#red {
+    background: red;
+}
+#orange {
+    background: rgb(253,187,45);
+}
+#yellow {
+    background: yellow;
+}
+#green {
+    background: #3CC157;
+}
+#blue {
+    background: rgba(34,193,195,1);
+}
+#indigo {
+    background: #6F339B;
+}
+#violet {
+    background: violet;
+}
+
+/*Game board*/
+.tile {
+    width: 33.33%;
+    height: 25vh;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 15px;
+    
+}
+.col2 {
+    border-right: .5rem dashed lightgrey;
+    border-left: .5rem dashed lightgrey;
+}
+
+.row2 {
+    border-top: .5rem dashed lightgrey;
+    border-bottom: .5rem dashed lightgrey;
+}
+.tile:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(34deg, var(--player1) 0%, var(--player2) 100%);
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+}
+
+.tile:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+    opacity: .8;
+}
+/*Game board result screen*/
+.centered {
+    position: fixed;
+    width: 40%;
+    height: 40vh;
+    top: 30%;
+    left: 30%;
+    margin: auto;
+    border: 10px solid black;
+    display: none;
+    background: #f0f0ff;
+    flex-direction: column
+
+}
+
+
+#result {
+    text-align: center;
+    margin: auto;
+    font-size: 3rem;
+    margin-bottom: 5%;
+}
+/*Result background*/
+.centered {
+    background: linear-gradient(-45deg, var(--player1), #ee7752, #e73c7e, #23a6d5, var(--player2));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/*Resetbuttons*/
+#reseter.endButton {
+    border: 10px solid black;
+    width: 50%;
+    margin-bottom: 25%;
+}
+
+#ready{
+    display: none;
+    justify-content: center;
+
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .name1, .name2, #reset, #reseter, .endButton {
+        font-size: .8rem;
+    }
+
+    .centered {
+        width: 65%;
+        left: 18%;
+    }
+}
