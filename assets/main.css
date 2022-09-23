@@ -122,9 +122,9 @@ body {
 .name2 {
     background: var(--player2);
 }
-#reset {
+#reset, #reseter {
     margin: auto;
-    height: 3.5vh;
+    height: 3vh;
     font-family: 'Racing Sans One', cursive, Arial, Helvetica, sans-serif;
     background: rgba(191, 245, 104, 0.8);
     width: 15%;
@@ -134,10 +134,14 @@ body {
     border-radius: .2rem;
 }
 
-    #reset:hover {
+#reseter:hover, #reset:hover {
         opacity: 70%;
         border: .2rem solid black;
     }
+
+
+
+/*Player Color Choices*/
 .colorContainer1, .colorContainer2 {
     display: flex;
     flex-wrap: wrap;
@@ -172,6 +176,7 @@ body {
     background: violet;
 }
 
+/*Game board*/
 .tile {
     width: 33.33%;
     height: 25vh;
@@ -207,16 +212,72 @@ body {
 .tile:hover:after {
     transform-origin: bottom center;
     transform: skewY(9.3deg) scaleY(2);
+    opacity: .8;
+}
+/*Game board result screen*/
+.centered {
+    position: fixed;
+    width: 40%;
+    height: 40vh;
+    top: 30%;
+    left: 30%;
+    margin: auto;
+    border: 10px solid black;
+    display: none;
+    background: #f0f0ff;
+    flex-direction: column
+
 }
 
+
+#result {
+    text-align: center;
+    margin: auto;
+    font-size: 3rem;
+    margin-bottom: 5%;
+}
+/*Result background*/
+.centered {
+    background: linear-gradient(-45deg, var(--player1), #ee7752, #e73c7e, #23a6d5, var(--player2));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/*Resetbuttons*/
+#reseter.endButton {
+    border: 10px solid black;
+    width: 50%;
+    margin-bottom: 25%;
+}
 
 #ready{
     display: none;
+    justify-content: center;
+
 }
 
 
+
 @media only screen and (max-width: 700px) {
-    .name1, .name2{
+    .name1, .name2, #reset, #reseter, .endButton {
         font-size: .8rem;
+    }
+
+    .centered {
+        width: 65%;
+        left: 18%;
     }
 }

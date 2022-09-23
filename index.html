@@ -6,19 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.js"></script>
+    <script src="js/howler.js"></script>
     <link href="assets/main.css" rel="stylesheet" />
 </head>
 <body>
-    <section id="ready">
-        <h1>Ready to play?</h1>
-
-        <h2>Curent Turn: Player 1</h2>
-
-        <span>Score Count: </span>
-    </section>
-    <section id="result">
-        <h2 class="winner"></h2>
-    </section>
     <section id="colorChoice">
         <div class="playerBlock">
             <section class="name1">&#8595 Player1 Color &#8595</section>
@@ -32,7 +24,7 @@
                 <section class="colors1" id="violet"></section>
             </div>
         </div>
-        <button id="reset"><span>Reset</span></button>
+        <button id="reset" class="reset"><span>Reset</span></button>
         <div class="playerBlock">
             <section class="name2">&#8595 Player2 Color &#8595</section>
             <div class="colorContainer2">
@@ -46,8 +38,8 @@
             </div>
         </div>
     </section>
-
     <div class="container">
+
         <section id="" class="tile diag1 row1 col1">
             <p>t1</p>
         </section>
@@ -76,9 +68,16 @@
             <p>t9</p>
         </section>
     </div>
+
+    <section id="end" class="centered pyro">
+        <div class="before"></div>
+        <h2 id="result"></h2>
+        <button id="reseter" class="endButton reset"><span>Reset</span></button>
+        <div class="after"></div>
+    </section>
+
     <section>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/background.js"></script>
 
