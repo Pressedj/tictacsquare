@@ -1,5 +1,6 @@
 # Tic Tac Toe but with Tiles!
 *Jazz hands!*
+![tiles](https://user-images.githubusercontent.com/88162896/192046787-d9be4b6d-4f8d-4114-978e-7329efdaa56d.gif)
 
 Currently working well, with some design.
 To do:
