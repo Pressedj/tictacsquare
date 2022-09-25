@@ -19,7 +19,8 @@ Refactor the app for OOP.
 
 <!--![tiles](https://user-images.githubusercontent.com/88162896/192046787-d9be4b6d-4f8d-4114-978e-7329efdaa56d.gif) -->
 
-Task list: (Complete) Currently working well, with some design.
+##Task list (Complete): 
+ Currently working well, with some design.
 <!--- Refactor for OOP
  Complete / Scrapped - Update the score counter -->
 Complete -  Result notification  
