@@ -1,18 +1,18 @@
 # Tic Tac Toe but with Tiles!: <a href="https://tictactile.netlify.app/" target="_blank">Click Here</a>
-*Jazz hands!*
+*Jazz hands!*  
 <a href="https://tictactile.netlify.app/" target="_blank"><img src="https://github.com/Pressedj/pressedj/blob/master/images/tiles.gif?raw=true" /></a>
 
 Anarchy Tic Tac Toe game allows players to take their opponent's tiles, but game must finish after 9 turns.
  
 ## Tech used: ![HTML5 BADGE](https://img.shields.io/static/v1?label=|&message=HTML5&color=23555f&style=plastic&logo=html5)![CSS BADGE](https://img.shields.io/static/v1?label=|&message=CSS3&color=285f65&style=plastic&logo=css3)![JAVASCRIPT BADGE](https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript)
 
-My learning was focused on JavaScript events and maniuplating the DOM. After that I was curious about JavaScript library imports so I played with howler.js.
 
 ## Optimizations
 When I improve this project, I'll add a score board and possibly a bakground changer. Perhaps add local storage to keep score across browser instances.
 Refactor the app for OOP.
 
 ## Lessons Learned:
+Focused on JavaScript events and maniuplating the DOM. After that I was curious about JavaScript library imports so I played with howler.js.
 
 .forEach can be pretty powerful, some animations can be completed in JavaScript as well as CSS
 
