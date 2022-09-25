@@ -9,7 +9,7 @@ Anarchy Tic Tac Toe game allows players to take their opponent's tiles, but game
 My learning was focused on JavaScript events and maniuplating the DOM. After that I was curious about JavaScript library imports so I played with howler.js.
 
 ## Optimizations
-When I improve this project, I add a score board and possibly a bakground changer. Perhaps add local storage to keep score across browser instances.
+When I improve this project, I'll add a score board and possibly a bakground changer. Perhaps add local storage to keep score across browser instances.
 Refactor the app for OOP.
 
 ## Lessons Learned:
